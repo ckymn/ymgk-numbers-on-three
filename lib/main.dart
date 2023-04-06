@@ -14,6 +14,7 @@ final _appRouter = AppRouter();
 
 Future<void> main() async {
   final IProjectInitialize appInitialize = ProjectInitialize();
+  print('Bur bir denemdir');
   await appInitialize.setup();
   runApp(
     EasyLocalization(
