@@ -59,17 +59,11 @@ class _OnboardingViewState extends State<OnboardingView> {
                             children: [
                               Padding(
                                 padding: EdgeInsets.only(left: 3.h, right: 3.0),
-                                child: index != 0
-                                    ? SvgPicture.asset(
-                                        context.read<OnboardCubit>().onboardingModelList[index].imagePath,
-                                        height: index == 2 ? 35.h : 33.h,
-                                        fit: BoxFit.fill,
-                                      )
-                                    : Image.asset(
-                                        context.read<OnboardCubit>().onboardingModelList[index].imagePath,
-                                        height: 40.h,
-                                        fit: BoxFit.fill,
-                                      ),
+                                child: Image.asset(
+                                  context.read<OnboardCubit>().onboardingModelList[index].imagePath,
+                                  height: 30.h,
+                                  fit: BoxFit.fill,
+                                ),
                               ),
                               DynamicVerticalSpace(
                                   height: index != 0
@@ -105,7 +99,7 @@ class _OnboardingViewState extends State<OnboardingView> {
                 child: BlocBuilder<OnboardCubit, OnboardState>(
                   builder: (context, state) {
                     return state.currentIndex == 2
-                        ? GeneralButton(onPressed: () => context.read<OnboardCubit>().navigateToLogin(context), radius: 2.h, label: 'Login')
+                        ? GeneralButton(onPressed: () => context.read<OnboardCubit>().navigateToLogin(context), radius: 2.h, label: 'PLAY')
                         : ListView.builder(
                             itemCount: 3,
                             shrinkWrap: true,
@@ -131,7 +125,7 @@ class _OnboardingViewState extends State<OnboardingView> {
 
   Positioned _buildSkipButton() {
     return Positioned(
-        top: 4.h,
+        top: 7.h,
         right: 0,
         child: BlocBuilder<OnboardCubit, OnboardState>(
           builder: (context, state) {

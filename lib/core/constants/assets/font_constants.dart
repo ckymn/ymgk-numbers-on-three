@@ -20,7 +20,6 @@ class FontsConstants {
 
     // MARK: - INTER
   final CUSTOM_ICONS = 'CUSTOM_ICONS';
-
       // MARK: - POPPINS
   final POPPINS_BOLD = 'POPPINS_BOLD';
   final POPPINS_LIGHT = 'POPPINS_LIGHT';

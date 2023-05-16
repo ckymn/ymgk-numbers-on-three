@@ -10,7 +10,7 @@ class AppNameLogo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      'MENU-AL',
+      'Number Game',
       style: TextStyle(
         fontFamily: FontsConstants.instance.IRISH_REGULAR,
         color: color ?? CustomColors.instance.primaryColor,

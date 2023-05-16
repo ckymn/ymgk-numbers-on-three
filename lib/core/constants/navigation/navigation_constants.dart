@@ -7,4 +7,5 @@ class NavigationConstants {
 
   NavigationConstants._init();
   final String onboarding = '/onboarding';
+  final String game = '/game';
 }

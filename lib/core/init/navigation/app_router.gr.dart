@@ -31,9 +31,12 @@ class _$AppRouter extends RootStackRouter {
         child: const OnboardingView(),
       );
     },
-
-
-
+    GameRoute.name: (routeData) {
+      return MaterialPageX<dynamic>(
+        routeData: routeData,
+        child: const GameView(),
+      );
+    },
   };
 
   @override
@@ -53,20 +56,8 @@ class _$AppRouter extends RootStackRouter {
           path: '/onboarding',
         ),
         RouteConfig(
-          LoginRoute.name,
-          path: '/login',
-        ),
-        RouteConfig(
-          RegisterRoute.name,
-          path: '/register',
-        ),
-        RouteConfig(
-          ForgotPasswordRoute.name,
-          path: '/forgotPassword',
-        ),
-        RouteConfig(
-          NewPasswordRoute.name,
-          path: '/newPassword',
+          GameRoute.name,
+          path: '/game',
         ),
       ];
 }
@@ -108,61 +99,13 @@ class OnboardingRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [LoginView]
-class LoginRoute extends PageRouteInfo<void> {
-  const LoginRoute()
+/// [GameView]
+class GameRoute extends PageRouteInfo<void> {
+  const GameRoute()
       : super(
-          LoginRoute.name,
-          path: '/login',
+          GameRoute.name,
+          path: '/game',
         );
 
-  static const String name = 'LoginRoute';
-}
-
-/// generated route for
-/// [RegisterView]
-class RegisterRoute extends PageRouteInfo<void> {
-  const RegisterRoute()
-      : super(
-          RegisterRoute.name,
-          path: '/register',
-        );
-
-  static const String name = 'RegisterRoute';
-}
-
-/// generated route for
-/// [ForgotPasswordView]
-class ForgotPasswordRoute extends PageRouteInfo<ForgotPasswordRouteArgs> {
-  ForgotPasswordRoute({Key? key})
-      : super(
-          ForgotPasswordRoute.name,
-          path: '/forgotPassword',
-          args: ForgotPasswordRouteArgs(key: key),
-        );
-
-  static const String name = 'ForgotPasswordRoute';
-}
-
-class ForgotPasswordRouteArgs {
-  const ForgotPasswordRouteArgs({this.key});
-
-  final Key? key;
-
-  @override
-  String toString() {
-    return 'ForgotPasswordRouteArgs{key: $key}';
-  }
-}
-
-/// generated route for
-/// [NewPasswordView]
-class NewPasswordRoute extends PageRouteInfo<void> {
-  const NewPasswordRoute()
-      : super(
-          NewPasswordRoute.name,
-          path: '/newPassword',
-        );
-
-  static const String name = 'NewPasswordRoute';
+  static const String name = 'GameRoute';
 }

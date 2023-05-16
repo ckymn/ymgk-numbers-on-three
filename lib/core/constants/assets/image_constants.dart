@@ -11,11 +11,11 @@ class ImageConstants {
   String get google => toPng('google');
 
   // Onboarding
-  String get onboard1 => toPng('onboard_image1');
-  String get onboard2 => toPng('onboard_image2');
-  String get onboard3 => toPng('onboard_image3');
+  String get onboard1 => toPng('mathematics');
+  String get onboard2 => toPng('success');
+  String get onboard3 => toPng('think');
 
-  String get phoneVerify => toPng('phone_verify');
+  String get tree => toPng('tree');
 
   String toPng(value) => 'assets/images/$value.png';
 }

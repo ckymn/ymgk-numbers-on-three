@@ -3,7 +3,9 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/constants/enums/duration_enums.dart';
+import '../../../core/constants/enums/preferences_keys.dart';
 import '../../../core/constants/navigation/navigation_constants.dart';
+import '../../../core/init/cache/locale_manager.dart';
 import 'splash_state.dart';
 
 class SplashCubit extends Cubit<SplashState> {
@@ -16,6 +18,10 @@ class SplashCubit extends Cubit<SplashState> {
   }
 
   void navigationToOnboarding(BuildContext context) {
-    context.router.replaceNamed(NavigationConstants.instance.onboarding);
+    if (LocaleManager.instance.getBoolValue(PreferencesKeys.SKIP_ONBOARDING)) {
+      context.router.replaceNamed(NavigationConstants.instance.game);
+    } else {
+      context.router.replaceNamed(NavigationConstants.instance.onboarding);
+    }
   }
 }
