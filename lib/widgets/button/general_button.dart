@@ -27,23 +27,22 @@ class GeneralButton extends StatelessWidget {
   final double? fontSize;
   final BoxBorder? border;
 
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: 50.w,
       child: Platform.isIOS
           ? CustomCupertinoButton.filled(
+              color: backgroundColor,
               disabledColor: CustomColors.instance.textBlackColor.withOpacity(0.3),
               borderRadius: BorderRadius.all(Radius.circular(radius ?? 0.8.h)),
               onPressed: onPressed,
               border: border,
-
               child: Text(
                 label,
                 style: TextStyle(
                   fontFamily: FontsConstants.instance.INTER_SEMIBOLD,
-                  fontSize:fontSize??15.sp,
+                  fontSize: fontSize ?? 15.sp,
                   color: textColor ?? Colors.white,
                 ),
               ),
@@ -64,7 +63,7 @@ class GeneralButton extends StatelessWidget {
                 label,
                 style: TextStyle(
                   fontFamily: FontsConstants.instance.INTER_SEMIBOLD,
-                  fontSize:fontSize?? 15.sp,
+                  fontSize: fontSize ?? 15.sp,
                   color: textColor ?? Colors.white,
                 ),
               ),

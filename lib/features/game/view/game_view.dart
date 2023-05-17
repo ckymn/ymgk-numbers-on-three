@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:number_on_trees/widgets/sizedBox/dynamic_veritical_space.dart';
 import 'package:sizer/sizer.dart';
 
 import '../../../core/constants/assets/image_constants.dart';
@@ -43,9 +44,9 @@ class _GameViewState extends State<GameView> {
   }
 
   void createRandomNumber() {
-    var find = findDivisors(rng.nextInt(1000));
+    var find = findDivisors(rng.nextInt(100));
     while (find.length != 6) {
-      find = findDivisors(rng.nextInt(1000));
+      find = findDivisors(rng.nextInt(100));
     }
   }
 
@@ -62,7 +63,21 @@ class _GameViewState extends State<GameView> {
       appBar: AppBar(
         elevation: 0,
         automaticallyImplyLeading: false,
+        backgroundColor: Color(0xffF2A83C),
         title: const Text('Ağaçlardaki Sayılar'),
+        centerTitle: false,
+        actions: [
+          IconButton(
+              onPressed: () {
+                createRandomIndex();
+                createRandomNumber();
+                textEditingController.text = '';
+                FocusScope.of(context).requestFocus(FocusNode());
+              },
+              icon: Icon(
+                Icons.refresh,
+              ))
+        ],
       ),
       body: Column(
         children: [
@@ -98,6 +113,7 @@ class _GameViewState extends State<GameView> {
                           starWidget(29.h, 38.w, randomIndex == 5 ? '?' : divisors[5].toString()),
                         ],
                       ),
+                      DynamicVerticalSpace(),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
                         child: Align(
@@ -131,6 +147,7 @@ class _GameViewState extends State<GameView> {
                     width: 50.w,
                     height: 7.h,
                     child: CustomCupertinoButton.filled(
+                        color: Color(0xffF2A83C),
                         child: const Text('İleri'),
                         onPressed: () {
                           if (textEditingController.text == '') {

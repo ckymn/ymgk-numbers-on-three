@@ -26,16 +26,14 @@ class OnboardCubit extends Cubit<OnboardState> {
   void init() {
     onboardingModelList = [
       OnBoardModel(
-          'Welcome1',
-          '1Lorem ipsum dolor sit amet consectetur. Sagittis adipiscing pulvinar tempor scelerisque erat molestie. Consequat imperdiet viverra aliquam auctor viverra.',
+          'Matematiksel Gökyüzünde Yolculuk',
+          'Ağaçta Bulunan Yıldızlar, matematiksel işlemleri eğlenceli bir oyun deneyimiyle birleştiren bir oyun. Bu oyunla birlikte matematiksel yeteneklerinizi kullanarak gökyüzünde bir yolculuğa çıkacak ve bulmacaları çözerken yıldızları keşfedeceksiniz.',
           ImageConstants.instance.onboard1),
-      OnBoardModel(
-          'Welcome2',
-          '2Lorem ipsum dolor sit amet consectetur. Sagittis adipiscing pulvinar tempor scelerisque erat molestie. Consequat imperdiet viverra aliquam auctor viverra.',
+      OnBoardModel('Yıldızlarla Dolu Matematik Labirentleri', 'Ağaçta Bulunan Yıldızlar, matematiksel labirentlerin yer aldığı bir oyun.',
           ImageConstants.instance.onboard2),
       OnBoardModel(
-          'Welcome3',
-          '3Lorem ipsum dolor sit amet consectetur. Sagittis adipiscing pulvinar tempor scelerisque erat molestie. Consequat imperdiet viverra aliquam auctor viverra.',
+          'Yıldızların Matematiksel Sırrını Çözün',
+          'Ağaçta Bulunan Yıldızlar, matematiksel sırları çözmek için bir bulmaca oyunudur. Oyunda, gizemli yıldızların arasında dolaşacak ve matematiksel soruları çözerek sırları açığa çıkaracaksınız.',
           ImageConstants.instance.onboard3),
     ];
     emit(OnboardState(
@@ -44,7 +42,7 @@ class OnboardCubit extends Cubit<OnboardState> {
   }
 
   Future<void> navigateToLogin(BuildContext context) async {
-     LocaleManager.instance.setBoolValue(PreferencesKeys.SKIP_ONBOARDING, true);
+    LocaleManager.instance.setBoolValue(PreferencesKeys.SKIP_ONBOARDING, true);
     context.router.replaceNamed(NavigationConstants.instance.game);
   }
 }

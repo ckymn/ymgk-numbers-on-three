@@ -99,7 +99,11 @@ class _OnboardingViewState extends State<OnboardingView> {
                 child: BlocBuilder<OnboardCubit, OnboardState>(
                   builder: (context, state) {
                     return state.currentIndex == 2
-                        ? GeneralButton(onPressed: () => context.read<OnboardCubit>().navigateToLogin(context), radius: 2.h, label: 'PLAY')
+                        ? GeneralButton(
+                            backgroundColor: Color(0xffF2A83C),
+                            onPressed: () => context.read<OnboardCubit>().navigateToLogin(context),
+                            radius: 2.h,
+                            label: 'PLAY')
                         : ListView.builder(
                             itemCount: 3,
                             shrinkWrap: true,
