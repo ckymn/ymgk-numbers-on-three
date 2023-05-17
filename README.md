@@ -1,9 +1,10 @@
 # Number on Three
 
-![](https://github.com/ckymn/ymgk-numbers-on-three/blob/main/image-1.png)
-![](https://github.com/ckymn/ymgk-numbers-on-three/blob/main/image-2.png)
-![](https://github.com/ckymn/ymgk-numbers-on-three/blob/main/image-3.png)
-![](https://github.com/ckymn/ymgk-numbers-on-three/blob/main/image-4.png)
+
+![image-1](https://github.com/ckymn/ymgk-numbers-on-three/blob/main/blob/main/image-1.png)
+![image-2](https://github.com/ckymn/ymgk-numbers-on-three/blob/main/blob/main/image-2.png)
+![image-3](https://github.com/ckymn/ymgk-numbers-on-three/blob/main/blob/main/image-3.png)
+![image-4](https://github.com/ckymn/ymgk-numbers-on-three/blob/main/blob/main/image-4.png)
 
 ## Technologies
 
